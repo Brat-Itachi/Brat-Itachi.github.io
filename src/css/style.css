@@ -1,11 +1,16 @@
+
 body{
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 nav{
     width: 100%;
     height: 60px;
     background: #344051;
+    position: fixed;
 }
 
 .logo{
@@ -14,6 +19,25 @@ nav{
     line-height: 60px;
     padding-left: 388px;
     float: left;
+    -webkit-animation: comming 2s ease;
+    -o-animation: comming 2s ease;
+    animation: comming 2s ease;
+}
+
+@keyframes comming{
+    from{
+        opacity: 0;
+    }
+    
+    to{
+        opacity: 1;
+    }
+    
+}
+
+main{
+    width: 100%;
+    height: 100%;
 }
 
 .menu{
@@ -29,11 +53,69 @@ nav{
     margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase;
+    font-weight: bold;
+    -webkit-animation: topshift 0.5s ease forwards;
+    -o-animation: topshift 0.5s ease forwards;
+    animation: topshift 0.5s ease forwards; 
+    opacity: 0;
 }
+
+.menu li a{
+    transition: all 0.2s;
+    color: white;
+    transform: scale(1);
+    display: inline-block;
+}
+
+.menu li a:visited{
+    color: white;
+    
+}
+.menu li a:hover{
+    color: #ea8e14;
+}
+
+.menu li a:active{
+   transform: scale(1.1);
+}
+
+@keyframes topshift{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
+    
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+    
+}
+
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+
+.menu li:nth-child(6){
+    animation-delay: 2s;
+}
+
 
 .main{
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100%;
     background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../img/bg.jpg) center/cover no-repeat;
 }
 
@@ -42,11 +124,31 @@ nav{
     margin: 432px 0px 0px 404px;
     color: #2c384a;
     text-align: center;
+    opacity: 0;
+    -webkit-animation: titlemove 1s ease forwards;
+    -o-animation: titlemove 1s ease forwards;
+    animation: titlemove 1s ease forwards;
+    -webkit-animation-delay: 2.4s;
+    -o-animation-delay: 2.4s;
+    animation-delay: 2.4s;
 }
 
 .title__container h1{
     font-size: 60px;
     font-weight: bold;
+}
+
+@keyframes titlemove{
+    from{
+        opacity: 0;
+        margin-left: -500px;
+    }
+    
+    to{
+        opacity: 1;
+        margin-left: 404px;
+    }
+    
 }
 
 .title__container h4{
@@ -67,6 +169,20 @@ nav{
     margin: 58px 14px 0px 14px;
     font-weight: 700;
     
+}
+
+.title__container input{
+    transition: all 0.4s;
+    transform: scale(1);
+}
+
+.title__container input:hover{
+    background: #2c384a;
+    color: white;
+}
+
+.title__container input:active{
+    transform: scale(1.1);
 }
 
 .aboutme{
@@ -106,6 +222,20 @@ nav{
     font-weight: 700;    
 }
 
+.title__container1 input{
+    transition: all 0.4s;
+    transform: scale(1);
+}
+
+.title__container1 input:hover{
+    background: #2c384a;
+    color: white;
+}
+
+.title__container1 input:active{
+    transform: scale(1.1);
+}
+
 .skills{
     width: 100%;
     height: 60%;
@@ -125,7 +255,7 @@ nav{
     font-weight: bold;
 }
 
-.title li{
+.title li {
     line-height: 60px;
     color: #cf7600;
     margin-right: 140px;
@@ -133,6 +263,21 @@ nav{
     font-size: 16px;
     font-weight: bold;
     float: left;
+}
+
+.title li a{
+    transition: all 0.2s;
+    color: white;
+    transform: scale(1);
+    display: inline-block;
+}
+
+.title li a:visited{
+    color: #ea8e14;
+    
+}
+.title li a:hover{
+    color: #2c384a;
 }
 
 .cases{
@@ -240,12 +385,10 @@ nav{
     font-weight: bold;
 }
 
-.select{
-    position: relative;
+
+select{
     appearance: none;
-    border: none;
     background-color: #eeeeee;
-    outline: none;
     padding: 22px 765px 22px 25px;
     margin: 0px 0px 0px 500px;
     font-family: inherit;
@@ -256,7 +399,7 @@ nav{
 .statistics {
     width: 100%;
     height: 50%;
-    background: url(../img/line.png) 50% 150px/auto 5px no-repeat , url(../img/smail.png) 27% 230px/auto 53px no-repeat, url(../img/znak2.png) 43% 230px/auto 53px no-repeat, url(../img/galochka.png) 59% 230px/auto 53px no-repeat, url(../img/kybok.png) 74% 230px/auto 53px no-repeat, url(../img/bg7.jpg) center/cover no-repeat;
+    background: url(../img/line.png) 50% 150px/auto 5px no-repeat , url(../img/smail.png) 27% 230px/auto 53px no-repeat, url(../img/znak2.png) 43% 230px/auto 53px no-repeat, url(../img/galochka.png) 59% 230px/auto 53px no-repeat, url(../img/kybok.png) 74% 230px/auto 53px no-repeat, url(../img/bg7.jpg) center/cover fixed no-repeat;
 }
 
 .stats{
@@ -264,7 +407,8 @@ nav{
     margin-top: 100px ;
     color: #2c384a;
     margin-left: 275px;
-    text-align: center;   
+    text-align: center;
+    
 }
 
 .stats h2{
@@ -272,6 +416,7 @@ nav{
     font-weight: bold;
     margin: 0px 0px 0px 160px;
 }
+
 
 .stats p{
     float: left;
@@ -358,6 +503,21 @@ nav{
     height: 60px;
 }
 
+.kontakt li a{
+    transition: all 0.2s;
+    color: white;
+    transform: scale(1);
+    display: inline-block;
+}
+
+.kontakt li a:visited{
+    color: white;
+    
+}
+.kontakt li a:hover{
+    color: #ea8e14;
+}
+
 .kontakt h3{
     font-size: 20px;
     font-weight: bold;
@@ -380,10 +540,11 @@ input[type=text]{
     padding: 11px 2px 2px 13px;
 }
 
-input[type=submit1]{
+input[type=button1]{
     height: 45px;
     width: 125px;
     font-size: 16px;
+    background: none;
     text-align: center;
     border: 2px solid #ffffff;
     background: none;
@@ -391,6 +552,20 @@ input[type=submit1]{
     color: #ffffff;
     margin: 20px 6px 0px 14px;
     font-weight: bold; 
+}
+
+input[type=button1]{
+    transition: all 0.4s;
+    transform: scale(1);
+}
+
+input[type=button1]:hover{
+    background: #ffffff;
+    color: #2c384a;
+}
+
+input[type=button1]:active{
+    transform: scale(1.1);
 }
 
 .karta{
@@ -402,6 +577,7 @@ input[type=submit1]{
 .karta input{
     height: 38px;
     width: 160px;
+    background: none;
     text-align: center;
     outline: 1px solid  #ffffff;
     box-shadow: 2px 2px #000;
@@ -409,6 +585,20 @@ input[type=submit1]{
     font-size: 56;
     margin: 150px 6px 0px 800px;
     font-weight: bold;  
+}
+
+.karta input{
+    transition: all 0.4s;
+    transform: scale(1);
+}
+
+.karta input:hover{
+    background: #ffffff;
+    color: #2c384a;
+}
+
+.karta input:active{
+    transform: scale(1.1);
 }
 
 .nav{
@@ -421,4 +611,35 @@ input[type=submit1]{
     font-size: 14px;
     margin-left: 800px; 
     line-height: 60px;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#preloader.hide-preloader {
+    -webkit-animation: hide-preloader 1s ease;
+    -o-animation: hide-preloader 1s ease;
+    animation: hide-preloader 1s ease;
+}
+
+#preloader.preloader-hidden {
+    display: none;
+}
+
+@keyframes hide-preloader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
